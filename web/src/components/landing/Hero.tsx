@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute bottom-8 left-6 md:left-12 flex items-center gap-3"
+          className="hidden md:flex absolute bottom-8 right-12 items-center gap-3 pointer-events-none"
         >
           <div className="w-px h-16 bg-ink/20 relative overflow-hidden">
             <motion.div

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
@@ -11,6 +12,7 @@ const navLinks = [
 ];
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -94,7 +96,7 @@ const Navbar: React.FC = () => {
               variant="secondary"
               size="sm"
               onClick={() => {
-                window.location.href = '/login';
+                navigate('/login');
               }}
             >
               Login
@@ -149,7 +151,7 @@ const Navbar: React.FC = () => {
                 size="lg"
                 onClick={() => {
                   setIsMobileOpen(false);
-                  window.location.href = '/login';
+                  navigate('/login');
                 }}
               >
                 Login

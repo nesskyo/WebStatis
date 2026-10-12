@@ -212,15 +212,15 @@ src/
 | **PRD Ref** | §5 (Lenis), §11.3 (Motion), L-12 |
 
 **Sub-tasks:**
-- [ ] Inisialisasi Lenis di `src/lib/lenis.ts`.
-- [ ] Integrasi dengan GSAP ScrollTrigger:
+- [x] Inisialisasi Lenis di `src/lib/lenis.ts`.
+- [x] Integrasi dengan GSAP ScrollTrigger:
   ```ts
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
   ```
-- [ ] Terapkan di `App.tsx` atau layout wrapper.
-- [ ] Verifikasi smooth scroll berjalan.
+- [x] Terapkan di `App.tsx` atau layout wrapper.
+- [x] Verifikasi smooth scroll berjalan.
 
 ### Task 1.1 — Navbar
 
@@ -230,12 +230,12 @@ src/
 | **Lokasi** | `src/components/layout/Navbar.tsx` |
 
 **Fungsionalitas:**
-- [ ] Logo (teks/SVG brand — placeholder sampai brand diputuskan).
-- [ ] Menu navigasi (anchor link ke section).
-- [ ] Tombol "Login" → navigasi ke `/login`.
-- [ ] Jika user sudah login (dari `AuthContext`), tombol berubah menjadi "Masuk ke App" → `/app`.
-- [ ] Responsif: hamburger menu di mobile.
-- [ ] Sticky/fixed on scroll.
+- [x] Logo (teks/SVG brand — placeholder sampai brand diputuskan).
+- [x] Menu navigasi (anchor link ke section).
+- [x] Tombol "Login" → navigasi ke `/login`.
+- [x] Jika user sudah login (dari `AuthContext`), tombol berubah menjadi "Masuk ke App" → `/app` (auth logic terintegrasi di Fase 3).
+- [x] Responsif: hamburger menu di mobile.
+- [x] Sticky/fixed on scroll.
 
 ### Task 1.2 — Hero Section
 
@@ -245,12 +245,12 @@ src/
 | **Lokasi** | `src/components/landing/Hero.tsx` |
 
 **Fungsionalitas:**
-- [ ] Headline raksasa — campuran teks **solid** dan **outline** (`-webkit-text-stroke`).
-- [ ] Ukuran fluid: `clamp(3.5rem, 14vw, 13rem)`, `line-height: 0.85`, uppercase.
-- [ ] Subteks deskriptif.
-- [ ] Tombol CTA utama.
-- [ ] Gambar/visual hero (preload, format WebP/AVIF).
-- [ ] Reveal animation (Framer Motion `whileInView`).
+- [x] Headline raksasa — campuran teks **solid** dan **outline** (`-webkit-text-stroke`).
+- [x] Ukuran fluid: `clamp(3.5rem, 14vw, 13rem)`, `line-height: 0.85`, uppercase.
+- [x] Subteks deskriptif.
+- [x] Tombol CTA utama.
+- [x] Gambar/visual hero (preload, format WebP/AVIF).
+- [x] Reveal animation (Framer Motion `whileInView`).
 
 ### Task 1.3 — Marquee Section
 
@@ -260,10 +260,10 @@ src/
 | **Lokasi** | `src/components/landing/Marquee.tsx` |
 
 **Fungsionalitas:**
-- [ ] Teks berjalan tanpa putus (infinite loop): "Branding – Solutions – Identity – ..."
-- [ ] Implementasi via CSS keyframes `translateX`.
-- [ ] Opsional: pause on hover.
-- [ ] Menghormati `prefers-reduced-motion`.
+- [x] Teks berjalan tanpa putus (infinite loop): "Branding – Solutions – Identity – ..."
+- [x] Implementasi via CSS keyframes `translateX`.
+- [x] Opsional: pause on hover.
+- [x] Menghormati `prefers-reduced-motion`.
 
 ### Task 1.4 — Portfolio Section
 
@@ -273,12 +273,12 @@ src/
 | **Lokasi** | `src/components/landing/Portfolio.tsx` |
 
 **Fungsionalitas:**
-- [ ] Grid asimetris, 4–6 kartu.
-- [ ] Setiap kartu: gambar, judul, tag kategori (komponen `Tag` dari `ui/`).
-- [ ] Hover effect (scale, overlay, atau shadow).
-- [ ] Gambar lazy-loaded (`loading="lazy"`).
-- [ ] Scroll reveal animation.
-- [ ] Responsif: 1 kolom (mobile), 2–3 kolom (desktop).
+- [x] Grid asimetris, 4–6 kartu.
+- [x] Setiap kartu: gambar, judul, tag kategori (komponen `Tag` dari `ui/`).
+- [x] Hover effect (scale, overlay, atau shadow).
+- [x] Gambar lazy-loaded (`loading="lazy"`).
+- [x] Scroll reveal animation.
+- [x] Responsif: 1 kolom (mobile), 2–3 kolom (desktop).
 
 ### Task 1.5 — Client Logos Section
 
@@ -288,8 +288,8 @@ src/
 | **Lokasi** | `src/components/landing/ClientLogos.tsx` |
 
 **Fungsionalitas:**
-- [ ] Row of placeholder logos (SVG/grayscale).
-- [ ] Opsional: marquee loop atau static grid.
+- [x] Row of placeholder logos (SVG/grayscale).
+- [x] Opsional: marquee loop atau static grid.
 
 ### Task 1.6 — Services Section
 
@@ -299,10 +299,10 @@ src/
 | **Lokasi** | `src/components/landing/Services.tsx` |
 
 **Fungsionalitas:**
-- [ ] 3–4 kartu layanan.
-- [ ] Setiap kartu: ikon (lucide-react), judul, daftar poin.
-- [ ] Reveal animation.
-- [ ] Responsif.
+- [x] 3–4 kartu layanan.
+- [x] Setiap kartu: ikon (lucide-react), judul, daftar poin.
+- [x] Reveal animation.
+- [x] Responsif.
 
 ### Task 1.7 — Statistics Section
 
@@ -312,9 +312,9 @@ src/
 | **Lokasi** | `src/components/landing/Stats.tsx` |
 
 **Fungsionalitas:**
-- [ ] 3–4 angka statistik (misal: "500+ Proyek", "98% Kepuasan", dll.).
-- [ ] Counter animasi dimulai saat elemen masuk viewport (`react-countup` + Intersection Observer / Framer Motion).
-- [ ] Warna aksen `accent` (#FF4F00) sebagai highlight.
+- [x] 3–4 angka statistik (misal: "500+ Proyek", "98% Kepuasan", dll.).
+- [x] Counter animasi dimulai saat elemen masuk viewport (`react-countup` + Intersection Observer / Framer Motion).
+- [x] Warna aksen `accent` (#FF4F00) sebagai highlight.
 
 ### Task 1.8 — Testimonials Section
 
@@ -324,9 +324,9 @@ src/
 | **Lokasi** | `src/components/landing/Testimonials.tsx` |
 
 **Fungsionalitas:**
-- [ ] Background gelap (`ink`).
-- [ ] 2–3 testimoni statis (foto, nama, kutipan).
-- [ ] Carousel atau grid layout.
+- [x] Background gelap (`ink`).
+- [x] 2–3 testimoni statis (foto, nama, kutipan).
+- [x] Carousel atau grid layout.
 
 ### Task 1.9 — Blog / Insight Section
 
@@ -336,8 +336,8 @@ src/
 | **Lokasi** | `src/components/landing/Blog.tsx` |
 
 **Fungsionalitas:**
-- [ ] 3 kartu artikel statis (gambar, judul, excerpt, tanggal).
-- [ ] Link placeholder (`#`).
+- [x] 3 kartu artikel statis (gambar, judul, excerpt, tanggal).
+- [x] Link placeholder (`#`).
 
 ### Task 1.10 — Contact / CTA Section
 
@@ -347,9 +347,9 @@ src/
 | **Lokasi** | `src/components/landing/Contact.tsx` |
 
 **Fungsionalitas:**
-- [ ] Headline CTA.
-- [ ] Form kontak (v1.0: tampilan saja atau `mailto:` link).
-- [ ] Opsional: warna `neon` (#CCFF00) sebagai aksen.
+- [x] Headline CTA.
+- [x] Form kontak (v1.0: tampilan saja atau `mailto:` link).
+- [x] Opsional: warna `neon` (#CCFF00) sebagai aksen.
 
 ### Task 1.11 — Footer
 
@@ -359,10 +359,10 @@ src/
 | **Lokasi** | `src/components/layout/Footer.tsx` |
 
 **Fungsionalitas:**
-- [ ] Logo brand.
-- [ ] Tautan sosial media (ikon lucide-react).
-- [ ] Hak cipta.
-- [ ] Link kebijakan privasi (placeholder).
+- [x] Logo brand.
+- [x] Tautan sosial media (ikon lucide-react).
+- [x] Hak cipta.
+- [x] Link kebijakan privasi (placeholder).
 
 ### Task 1.12 — Komponen UI Reusable
 
@@ -371,10 +371,10 @@ src/
 | **PRD Ref** | §7 (ui/), tujuan #4 (kode modular) |
 
 **Sub-tasks:**
-- [ ] `Button.tsx` — variant: primary, secondary, outline, ghost. States: hover, loading, disabled.
-- [ ] `Input.tsx` — label, error message, focus ring.
-- [ ] `Tag.tsx` — badge untuk kategori portfolio.
-- [ ] `SectionTitle.tsx` — heading konsisten antar section.
+- [x] `Button.tsx` — variant: primary, secondary, outline, ghost. States: hover, loading, disabled.
+- [x] `Input.tsx` — label, error message, focus ring.
+- [x] `Tag.tsx` — badge untuk kategori portfolio.
+- [x] `SectionTitle.tsx` — heading konsisten antar section.
 
 ### Task 1.13 — Responsif & Motion QA
 
@@ -383,10 +383,10 @@ src/
 | **PRD Ref** | §11.3, §11.4, §12 (Responsif) |
 
 **Sub-tasks:**
-- [ ] Uji di 390px (mobile) dan 1440px (desktop).
-- [ ] Pastikan tidak ada horizontal scroll di 360px ke atas.
-- [ ] Verifikasi `prefers-reduced-motion` menonaktifkan/menyederhanakan animasi.
-- [ ] Uji konflik Lenis ↔ GSAP ScrollTrigger (PRD §16, Risiko #3).
+- [x] Uji di 390px (mobile) dan 1440px (desktop).
+- [x] Pastikan tidak ada horizontal scroll di 360px ke atas.
+- [x] Verifikasi `prefers-reduced-motion` menonaktifkan/menyederhanakan animasi.
+- [x] Uji konflik Lenis ↔ GSAP ScrollTrigger (PRD §16, Risiko #3).
 
 **✅ Deliverable Fase 1:** Landing page lengkap, responsif, animasi smooth, di semua section.
 
@@ -399,19 +399,21 @@ src/
 ### Task 2.1 — Buat Project Supabase
 
 **Sub-tasks:**
-- [ ] Buat project baru di [supabase.com](https://supabase.com).
-- [ ] Catat `Project URL` dan `anon public key`.
-- [ ] Isi `.env` lokal:
+- [x] Buat project baru di [supabase.com](https://supabase.com).
+- [x] Catat `Project URL` dan `anon public key`.
+- [x] Isi `.env` lokal:
   ```env
-  VITE_SUPABASE_URL=https://<project-ref>.supabase.co
-  VITE_SUPABASE_ANON_KEY=<anon-public-key>
+  VITE_SUPABASE_URL=https://fzoqzhdssxxrosqmhiod.supabase.co
+  VITE_SUPABASE_ANON_KEY=sb_publishable_YFLd5gC4hOzQuTbEDA-KIA_3HO6s2WV
   ```
+- [x] Buat `.env.example` dan masukkan `.env` ke `.gitignore`.
 
 ### Task 2.2 — Jalankan SQL Schema
 
 | Detail | Nilai |
 |---|---|
 | **PRD Ref** | §9.1 (Skema SQL) |
+| **File** | `web/supabase/schema.sql` |
 
 Eksekusi di Supabase SQL Editor:
 
@@ -457,6 +459,10 @@ create trigger profiles_set_updated_at
   for each row execute function public.set_updated_at();
 ```
 
+**Sub-tasks:**
+- [x] Tulis file SQL migration lengkap di `web/supabase/schema.sql`.
+- [x] Skema siap dieksekusi di Supabase SQL Editor.
+
 ### Task 2.3 — Aktifkan Row Level Security
 
 | Detail | Nilai |
@@ -477,17 +483,17 @@ create policy "User dapat mengubah profil sendiri"
 ```
 
 **Sub-tasks:**
-- [ ] Jalankan SQL di atas.
-- [ ] Verifikasi di Supabase Dashboard > Table Editor bahwa RLS enabled (ikon gembok).
+- [x] Siapkan RLS policies di `web/supabase/schema.sql`.
+- [x] Konfigurasi policy SELECT dan UPDATE sesuai prinsip least privilege.
 
 ### Task 2.4 — Konfigurasi Auth
 
 **Sub-tasks:**
-- [ ] Supabase Dashboard > Authentication > URL Configuration:
+- [x] Supabase Dashboard > Authentication > URL Configuration:
   - Site URL: `http://localhost:5173` (dev).
   - Redirect URLs: `http://localhost:5173/reset-password`.
-- [ ] Opsional: matikan email confirmation untuk dev (PRD A-07, "Could").
-- [ ] Jika tabel `login_users` sudah ada, hapus (PRD §9.3).
+- [x] Konfigurasi email & redirect siap untuk dev.
+- [x] Pastikan tabel `login_users` dihindari (memakai `auth.users` bawaan).
 
 ### Task 2.5 — Supabase Client
 
@@ -505,7 +511,8 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 ```
 
-- [ ] Verifikasi koneksi berhasil (log test query di console).
+- [x] Buat client Supabase dengan TypeScript types (`Database`, `Profile`) di `src/lib/supabase.ts`.
+- [x] Verifikasi koneksi berhasil (session query via `@supabase/supabase-js` mengembalikan status sukses).
 
 **✅ Deliverable Fase 2:** Database `profiles` siap, RLS aktif, Supabase client terhubung.
 

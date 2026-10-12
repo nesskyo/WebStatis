@@ -14,8 +14,10 @@ const footerLinks = [
   { label: 'Cookies', href: '#' },
 ];
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = CURRENT_YEAR;
 
   return (
     <footer className="bg-ink px-6 md:px-12 py-12 md:py-16">

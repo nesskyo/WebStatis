@@ -621,10 +621,10 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/pages/MainApp.tsx` |
 
 **Fungsionalitas:**
-- [ ] Header:
+- [x] Header:
   - Nama/email user (dari `useAuth()` atau `profiles`).
   - Tombol Logout.
-- [ ] Tampilkan data dari tabel `profiles`:
+- [x] Tampilkan data dari tabel `profiles`:
   ```ts
   const { data } = await supabase
     .from('profiles')
@@ -632,7 +632,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
     .eq('id', user.id)
     .single();
   ```
-- [ ] Dashboard sederhana: kartu ringkasan, daftar item (konten final sesuai keputusan #2).
+- [x] Dashboard sederhana: kartu ringkasan, daftar item (konten final sesuai keputusan #2).
 
 ### Task 4.2 — Logout
 
@@ -641,9 +641,9 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **PRD Ref** | M-05 |
 
 **Fungsionalitas:**
-- [ ] Call `supabase.auth.signOut()`.
-- [ ] Redirect ke `/`.
-- [ ] Pastikan tombol back browser tidak membuka kembali `/app`.
+- [x] Call `supabase.auth.signOut()`.
+- [x] Redirect ke `/`.
+- [x] Pastikan tombol back browser tidak membuka kembali `/app`.
 
 ### Task 4.3 — Session Persistence Verification
 
@@ -652,8 +652,8 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **PRD Ref** | M-06 |
 
 **Sub-tasks:**
-- [ ] Login → buka `/app` → refresh browser → harus tetap di `/app`.
-- [ ] Tutup tab → buka kembali → session masih valid (tergantung cookie/localStorage Supabase).
+- [x] Login → buka `/app` → refresh browser → harus tetap di `/app`.
+- [x] Tutup tab → buka kembali → session masih valid (tergantung cookie/localStorage Supabase).
 
 **✅ Deliverable Fase 4:** Alur penuh Landing → Login → App berfungsi end-to-end.
 

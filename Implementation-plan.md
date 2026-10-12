@@ -530,11 +530,11 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/context/AuthContext.tsx` |
 
 **Fungsionalitas:**
-- [ ] State: `user`, `session`, `loading`.
-- [ ] `useEffect` → `supabase.auth.getSession()` untuk initial load.
-- [ ] `supabase.auth.onAuthStateChange()` listener.
-- [ ] Expose via `useAuth()` hook.
-- [ ] `loading` harus `true` sampai session check selesai (mencegah flash redirect — PRD §10).
+- [x] State: `user`, `session`, `loading`.
+- [x] `useEffect` → `supabase.auth.getSession()` untuk initial load.
+- [x] `supabase.auth.onAuthStateChange()` listener.
+- [x] Expose via `useAuth()` hook.
+- [x] `loading` harus `true` sampai session check selesai (mencegah flash redirect — PRD §10).
 
 ### Task 3.2 — Login Form
 
@@ -544,14 +544,14 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/components/auth/LoginForm.tsx` |
 
 **Fungsionalitas:**
-- [ ] Field email dan password.
-- [ ] Validasi via `react-hook-form` + `zod`:
+- [x] Field email dan password.
+- [x] Validasi via `react-hook-form` + `zod`:
   - Email: format valid.
   - Password: minimal 8 karakter.
-- [ ] Call `supabase.auth.signInWithPassword({ email, password })`.
-- [ ] Loading indicator pada tombol saat request.
-- [ ] Error message yang jelas (tanpa bocorkan info sensitif).
-- [ ] Redirect ke `/app` setelah sukses.
+- [x] Call `supabase.auth.signInWithPassword({ email, password })`.
+- [x] Loading indicator pada tombol saat request.
+- [x] Error message yang jelas (tanpa bocorkan info sensitif).
+- [x] Redirect ke `/app` setelah sukses.
 
 ### Task 3.3 — Register Form
 
@@ -561,11 +561,11 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/components/auth/RegisterForm.tsx` |
 
 **Fungsionalitas:**
-- [ ] Field email, password, full name (opsional).
-- [ ] Validasi sama seperti login + konfirmasi password.
-- [ ] Call `supabase.auth.signUp({ email, password, options: { data: { full_name } } })`.
-- [ ] Trigger `handle_new_user` akan otomatis membuat profil.
-- [ ] Loading indicator & error handling.
+- [x] Field email, password, full name (opsional).
+- [x] Validasi sama seperti login + konfirmasi password.
+- [x] Call `supabase.auth.signUp({ email, password, options: { data: { full_name } } })`.
+- [x] Trigger `handle_new_user` akan otomatis membuat profil.
+- [x] Loading indicator & error handling.
 
 ### Task 3.4 — Login Page (Toggle Login/Register)
 
@@ -575,10 +575,10 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/pages/Login.tsx` |
 
 **Fungsionalitas:**
-- [ ] Tab/toggle antara `LoginForm` dan `RegisterForm`.
-- [ ] Jika user sudah login (`useAuth()`), redirect ke `/app` (PRD §10).
-- [ ] Animasi transisi antar form (Framer Motion).
-- [ ] Desain visual sesuai brand.
+- [x] Tab/toggle antara `LoginForm` dan `RegisterForm`.
+- [x] Jika user sudah login (`useAuth()`), redirect ke `/app` (PRD §10).
+- [x] Animasi transisi antar form (Framer Motion).
+- [x] Desain visual sesuai brand.
 
 ### Task 3.5 — Reset Password
 
@@ -588,9 +588,9 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/components/auth/ResetForm.tsx`, `src/pages/ResetPassword.tsx` |
 
 **Fungsionalitas:**
-- [ ] "Lupa password?" link di `LoginForm`.
-- [ ] Form kirim email: `supabase.auth.resetPasswordForEmail(email, { redirectTo })`.
-- [ ] Halaman `/reset-password`: form password baru → `supabase.auth.updateUser({ password })`.
+- [x] "Lupa password?" link di `LoginForm`.
+- [x] Form kirim email: `supabase.auth.resetPasswordForEmail(email, { redirectTo })`.
+- [x] Halaman `/reset-password`: form password baru → `supabase.auth.updateUser({ password })`.
 
 ### Task 3.6 — ProtectedRoute (Logic Final)
 
@@ -600,10 +600,10 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 | **Lokasi** | `src/routes/ProtectedRoute.tsx` |
 
 **Fungsionalitas:**
-- [ ] Ambil `user` dan `loading` dari `useAuth()`.
-- [ ] Jika `loading` → tampilkan spinner/skeleton (bukan redirect).
-- [ ] Jika `!user` → `<Navigate to="/login" replace />`.
-- [ ] Jika `user` → render `<Outlet />` atau children.
+- [x] Ambil `user` dan `loading` dari `useAuth()`.
+- [x] Jika `loading` → tampilkan spinner/skeleton (bukan redirect).
+- [x] Jika `!user` → `<Navigate to="/login" replace />`.
+- [x] Jika `user` → render `<Outlet />` atau children.
 
 **✅ Deliverable Fase 3:** Alur daftar, login, logout, reset password berfungsi. Session persisten.
 

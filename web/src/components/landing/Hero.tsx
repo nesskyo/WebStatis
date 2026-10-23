@@ -22,11 +22,11 @@ const Hero: React.FC = () => {
             className="font-display uppercase leading-[0.85]"
             style={{ fontSize: 'clamp(3.5rem, 14vw, 13rem)' }}
           >
-            <span className="block text-ink">We Create</span>
-            <span className="block text-outline">Digital</span>
+            <span className="block text-ink">Welcome to</span>
+            <span className="block text-outline">Ness</span>
             <span className="block text-ink">
-              Experi
-              <span className="text-accent">ence</span>
+              Port
+              <span className="text-accent">folio</span>
             </span>
           </h1>
         </motion.div>
